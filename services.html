@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu & Order — Vintage Cafe | Everett, WA</title>
+  <meta name="description" content="Explore the full menu at Vintage Cafe — from classic eggs benedict and French toast to poutine and chicken marsala. Order online for pickup.">
+
+  <meta property="og:title" content="Menu & Order — Vintage Cafe">
+  <meta property="og:description" content="Breakfast, classics, and sides. Order online for pickup at Vintage Cafe, Everett.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://picsum.photos/seed/vintagecafe-menu-og/1200/630.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-brand">Our Menu</div>
+    <div class="preloader-line"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">Vintage<span>.</span></a>
+      <div class="navbar-links">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="about.html" class="navbar-link">Our Story</a>
+        <a href="services.html" class="navbar-link active">Menu</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </div>
+      <div class="navbar-actions">
+        <button class="cart-btn" aria-label="Open cart">
+          <i data-lucide="shopping-bag" style="width:20px;height:20px;"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-menu-link">Home</a>
+    <a href="about.html" class="mobile-menu-link">Our Story</a>
+    <a href="services.html" class="mobile-menu-link">Menu</a>
+    <a href="contact.html" class="mobile-menu-link">Contact</a>
+    <div class="mobile-menu-footer">1510 Hewitt Ave, Everett WA</div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero" style="min-height:35vh;">
+    <div class="page-hero-bg">
+      <img src="menuhero.png" alt="Vintage Cafe dishes" loading="eager">
+    </div>
+    <div class="page-hero-content">
+      <h1 class="page-hero-title">Our <em>Menu</em></h1>
+      <p class="page-hero-subtitle">Breakfast, classics, and sides — made with love since 1892.</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="section">
+    <div class="section-container">
+
+      <!-- Category Tabs -->
+      <div class="menu-tabs reveal">
+        <button class="menu-tab active" data-category="all">All</button>
+        <button class="menu-tab" data-category="breakfast">Breakfast</button>
+        <button class="menu-tab" data-category="classics">Classics</button>
+        <button class="menu-tab" data-category="from-kitchen">From the Kitchen</button>
+        <button class="menu-tab" data-category="sides">Sides</button>
+      </div>
+
+      <!-- ═══════ BREAKFAST ═══════ -->
+      <div class="menu-category" data-category="breakfast">
+        <h3 class="font-heading reveal" style="font-size:1.5rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;">
+          <span style="color:var(--caramel);"><i data-lucide="sunrise" style="width:22px;height:22px;vertical-align:middle;"></i></span>
+          Breakfast
+        </h3>
+        <div class="menu-grid" style="margin-bottom:3rem;">
+
+          <div class="menu-item reveal" data-item-id="2-egg-breakfast" data-item-name="2 Egg Breakfast" data-item-price="14.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">2 Egg Breakfast</h4>
+              <p class="menu-item-desc">Two eggs any style with potatoes and toast</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$14.00</span>
+              <button class="menu-item-add" aria-label="Add 2 Egg Breakfast to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="mini-omelet" data-item-name="Mini Omelet" data-item-price="12.50">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Mini Omelet</h4>
+              <p class="menu-item-desc">Smaller portion omelet with your choice of fillings</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$12.50</span>
+              <button class="menu-item-add" aria-label="Add Mini Omelet to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="cafe-omelet" data-item-name="Cafe Omelet" data-item-price="17.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Cafe Omelet</h4>
+              <p class="menu-item-desc">Chef's special omelet with cheese and fresh ingredients</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$17.00</span>
+              <button class="menu-item-add" aria-label="Add Cafe Omelet to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="denver-omelet" data-item-name="Denver Omelet" data-item-price="17.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Denver Omelet</h4>
+              <p class="menu-item-desc">Ham, bell peppers, onions, and melted cheese</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$17.00</span>
+              <button class="menu-item-add" aria-label="Add Denver Omelet to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="veggie-omelet" data-item-name="Veggie Omelet" data-item-price="17.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Veggie Omelet</h4>
+              <p class="menu-item-desc">Fresh seasonal vegetables with herbs and cheese</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$17.00</span>
+              <button class="menu-item-add" aria-label="Add Veggie Omelet to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="vintage-scramble" data-item-name="Vintage Scramble" data-item-price="19.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Vintage Scramble</h4>
+              <p class="menu-item-desc">Our signature scramble with house-seasoned potatoes, sausage, and cheese</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$19.00</span>
+              <button class="menu-item-add" aria-label="Add Vintage Scramble to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="pnw-scramble" data-item-name="PNW Scramble" data-item-price="19.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">PNW Scramble</h4>
+              <p class="menu-item-desc">Pacific Northwest inspired — smoked salmon, cream cheese, and fresh dill</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$19.00</span>
+              <button class="menu-item-add" aria-label="Add PNW Scramble to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ═══════ CLASSICS ═══════ -->
+      <div class="menu-category" data-category="classics">
+        <h3 class="font-heading reveal" style="font-size:1.5rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;">
+          <span style="color:var(--caramel);"><i data-lucide="crown" style="width:22px;height:22px;vertical-align:middle;"></i></span>
+          Classics
+        </h3>
+        <div class="menu-grid" style="margin-bottom:3rem;">
+
+          <div class="menu-item reveal" data-item-id="eggs-benedict" data-item-name="Eggs Benedict" data-item-price="20.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Eggs Benedict</h4>
+              <p class="menu-item-desc">Traditional ham or Florentine with hollandaise and potatoes</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$20.00</span>
+              <button class="menu-item-add" aria-label="Add Eggs Benedict to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="biscuits-gravy" data-item-name="Biscuits & Gravy" data-item-price="20.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Biscuits & Gravy</h4>
+              <p class="menu-item-desc">Homemade sausage gravy over fresh-baked biscuits with potatoes</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$20.00</span>
+              <button class="menu-item-add" aria-label="Add Biscuits and Gravy to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="chicken-fried-steak" data-item-name="Chicken Fried Steak" data-item-price="20.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Chicken Fried Steak</h4>
+              <p class="menu-item-desc">Hand-breaded steak with country gravy and homestyle sides</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$20.00</span>
+              <button class="menu-item-add" aria-label="Add Chicken Fried Steak to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="vintage-french-toast" data-item-name="Vintage French Toast" data-item-price="20.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Vintage French Toast</h4>
+              <p class="menu-item-desc">Our signature French toast with seasonal accompaniments and powdered sugar</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$20.00</span>
+              <button class="menu-item-add" aria-label="Add Vintage French Toast to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="ground-sirloin-patty" data-item-name="Ground Sirloin Patty" data-item-price="15.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Ground Sirloin Patty</h4>
+              <p class="menu-item-desc">Hand-formed beef patty with eggs, potatoes, and toast</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$15.00</span>
+              <button class="menu-item-add" aria-label="Add Ground Sirloin Patty to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ═══════ FROM THE KITCHEN ═══════ -->
+      <div class="menu-category" data-category="from-kitchen">
+        <h3 class="font-heading reveal" style="font-size:1.5rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;">
+          <span style="color:var(--caramel);"><i data-lucide="flame" style="width:22px;height:22px;vertical-align:middle;"></i></span>
+          From the Kitchen
+        </h3>
+        <div class="menu-grid" style="margin-bottom:3rem;">
+
+          <div class="menu-item reveal" data-item-id="patty-melt" data-item-name="Patty Melt" data-item-price="16.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Patty Melt</h4>
+              <p class="menu-item-desc">Ground sirloin patty with caramelized onions and Swiss on griddled rye</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$16.00</span>
+              <button class="menu-item-add" aria-label="Add Patty Melt to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="poutine" data-item-name="Poutine" data-item-price="16.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Poutine</h4>
+              <p class="menu-item-desc">Crispy fries topped with rich brown gravy and cheese curds</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$16.00</span>
+              <button class="menu-item-add" aria-label="Add Poutine to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="chicken-marsala" data-item-name="Chicken Marsala" data-item-price="22.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Chicken Marsala</h4>
+              <p class="menu-item-desc">Pan-seared chicken in Marsala wine sauce with mushrooms and herbs</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$22.00</span>
+              <button class="menu-item-add" aria-label="Add Chicken Marsala to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ═══════ SIDES ═══════ -->
+      <div class="menu-category" data-category="sides">
+        <h3 class="font-heading reveal" style="font-size:1.5rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;">
+          <span style="color:var(--caramel);"><i data-lucide="utensils" style="width:22px;height:22px;vertical-align:middle;"></i></span>
+          Sides
+        </h3>
+        <div class="menu-grid" style="margin-bottom:3rem;">
+
+          <div class="menu-item reveal" data-item-id="bacon-ham-sausage" data-item-name="Bacon, Ham, or Sausage" data-item-price="5.50">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Bacon, Ham, or Sausage</h4>
+              <p class="menu-item-desc">Choose your protein side</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$5.50</span>
+              <button class="menu-item-add" aria-label="Add Bacon Ham or Sausage to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="country-gravy" data-item-name="Country Gravy" data-item-price="5.50">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Country Gravy</h4>
+              <p class="menu-item-desc">Homemade sausage country gravy</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$5.50</span>
+              <button class="menu-item-add" aria-label="Add Country Gravy to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="hash-browns" data-item-name="Hash Browns" data-item-price="5.50">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Hash Browns</h4>
+              <p class="menu-item-desc">Crispy golden hash brown potatoes</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$5.50</span>
+              <button class="menu-item-add" aria-label="Add Hash Browns to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="toast" data-item-name="Toast" data-item-price="3.50">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Toast</h4>
+              <p class="menu-item-desc">White, wheat, sourdough, or rye</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$3.50</span>
+              <button class="menu-item-add" aria-label="Add Toast to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="fresh-fruit" data-item-name="Fresh Fruit" data-item-price="5.50">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Fresh Fruit</h4>
+              <p class="menu-item-desc">Seasonal fresh fruit cup</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$5.50</span>
+              <button class="menu-item-add" aria-label="Add Fresh Fruit to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item reveal" data-item-id="mac-and-cheese" data-item-name="Mac and Cheese" data-item-price="6.00">
+            <div class="menu-item-info">
+              <h4 class="menu-item-name">Mac and Cheese</h4>
+              <p class="menu-item-desc">Creamy house-made macaroni and cheese</p>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-price">$6.00</span>
+              <button class="menu-item-add" aria-label="Add Mac and Cheese to order">+</button>
+              <div class="menu-item-qty" style="display:none;">
+                <button class="qty-minus" aria-label="Decrease quantity"><i data-lucide="minus" style="width:14px;height:14px;"></i></button>
+                <span>1</span>
+                <button class="qty-plus" aria-label="Increase quantity"><i data-lucide="plus" style="width:14px;height:14px;"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section">
+    <div class="section-container" style="position:relative;z-index:1;">
+      <h2 class="cta-heading reveal">Dine With <em>Us</em></h2>
+      <p class="cta-desc reveal" data-delay="0.1">Nothing beats the real thing. Visit us at 1510 Hewitt Ave and experience the warmth firsthand.</p>
+      <div class="reveal" data-delay="0.2">
+        <a href="contact.html" class="btn btn-primary">Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Vintage<span>.</span></div>
+          <p class="footer-tagline">A casual gathering place since 1892. Serving global-inspired comfort food in the heart of Everett, Washington.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/vintagecafe" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <i data-lucide="instagram" style="width:18px;height:18px;"></i>
+            </a>
+            <a href="https://facebook.com/vintagecafe" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <i data-lucide="facebook" style="width:18px;height:18px;"></i>
+            </a>
+            <a href="https://yelp.com/biz/vintage-cafe-everett" target="_blank" rel="noopener" class="footer-social-link" aria-label="Yelp">
+              <i data-lucide="star" style="width:18px;height:18px;"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Navigate</div>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">Our Story</a>
+            <a href="services.html" class="footer-link">Menu</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Hours</div>
+          <div class="footer-links">
+            <span class="footer-link">Mon — Sun</span>
+            <span class="footer-link">7:00 AM — 3:00 PM</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-links">
+            <a href="tel:+14255551234" class="footer-link">(425) 555-1234</a>
+            <a href="mailto:hello@vintagecafe.com" class="footer-link">hello@vintagecafe.com</a>
+            <span class="footer-link">1510 Hewitt Ave, Everett WA</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">2025 Vintage Cafe. All rights reserved.</span>
+        <span class="footer-dw33py">Engineered in motion — <a href="https://dw33py.netlify.app" target="_blank" rel="noopener">Dw33pY</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay"></div>
+  <div class="cart-drawer" role="dialog" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button class="cart-close" aria-label="Close cart">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-amount">$0.00</span>
+      </div>
+      <button class="cart-checkout-btn">Place Order</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="checkout-modal-overlay">
+    <div class="checkout-modal">
+      <div class="checkout-modal-header">
+        <h3>Complete Order</h3>
+        <button class="checkout-modal-close cart-close" aria-label="Close checkout">
+          <i data-lucide="x" style="width:20px;height:20px;"></i>
+        </button>
+      </div>
+      
+      <!-- Order Summary -->
+      <div class="checkout-summary">
+        <div class="checkout-summary-title">Your Items</div>
+        <div class="checkout-summary-list"></div>
+        <div class="checkout-summary-divider"></div>
+        <div class="checkout-summary-item">
+          <span class="checkout-summary-item-name" style="font-weight:700;">Total</span>
+          <span class="checkout-summary-total" style="font-family:var(--font-heading);font-size:1.1rem;font-weight:700;color:var(--caramel);">$0.00</span>
+        </div>
+      </div>
+      
+      <form id="checkout-form" class="checkout-form">
+        <div class="form-group">
+          <label for="checkout-name">Name</label>
+          <input type="text" id="checkout-name" name="name" placeholder="Your full name" required>
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="checkout-phone">Phone</label>
+          <input type="tel" id="checkout-phone" name="phone" placeholder="(425) 555-0000" required>
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="checkout-time">Pickup Time</label>
+          <select id="checkout-time" name="time">
+            <option value="asap">As soon as possible</option>
+            <option value="30min">In 30 minutes</option>
+            <option value="1hr">In 1 hour</option>
+            <option value="90min">In 1.5 hours</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="checkout-notes">Special Instructions</label>
+          <textarea id="checkout-notes" name="notes" placeholder="Any allergies or preferences..." rows="3"></textarea>
+        </div>
+        <button type="submit" class="checkout-submit">Confirm Order</button>
+      </form>
+      <div class="order-confirmation">
+        <div class="order-confirmation-icon">
+          <i data-lucide="check" style="width:32px;height:32px;"></i>
+        </div>
+        <h3>Order Placed!</h3>
+        <p>We're preparing your order. We'll call you shortly to confirm.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Buttons -->
+  <div class="float-btns">
+    <a href="tel:+14255551234" id="float-call" class="float-btn float-call" aria-label="Call Vintage Cafe">
+      <i data-lucide="phone" style="width:22px;height:22px;"></i>
+    </a>
+    <a href="sms:+14255551234?body=Hi%20Vintage%20Cafe!%20I%27d%20like%20to%20place%20an%20order." id="float-text" class="float-btn float-text" aria-label="Text Vintage Cafe">
+      <i data-lucide="message-square" style="width:22px;height:22px;"></i>
+    </a>
+    <button class="float-btn float-top" aria-label="Back to top">
+      <i data-lucide="arrow-up" style="width:22px;height:22px;"></i>
+    </button>
+  </div>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>

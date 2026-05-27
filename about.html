@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — Vintage Cafe | Since 1892</title>
+  <meta name="description" content="Discover the rich history of Vintage Cafe — Everett's beloved gathering place since 1892. Over 130 years of community, comfort food, and tradition.">
+
+  <meta property="og:title" content="Our Story — Vintage Cafe | Since 1892">
+  <meta property="og:description" content="Over 130 years of community, comfort food, and tradition in the heart of Everett, WA.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://picsum.photos/seed/vintagecafe-about-og/1200/630.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-brand">Our Story</div>
+    <div class="preloader-line"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">Vintage<span>.</span></a>
+      <div class="navbar-links">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="about.html" class="navbar-link active">Our Story</a>
+        <a href="services.html" class="navbar-link">Menu</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </div>
+      <div class="navbar-actions">
+        <button class="cart-btn" aria-label="Open cart">
+          <i data-lucide="shopping-bag" style="width:20px;height:20px;"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-menu-link">Home</a>
+    <a href="about.html" class="mobile-menu-link">Our Story</a>
+    <a href="services.html" class="mobile-menu-link">Menu</a>
+    <a href="contact.html" class="mobile-menu-link">Contact</a>
+    <div class="mobile-menu-footer">1510 Hewitt Ave, Everett WA</div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="abouthero.png" alt="Vintage Cafe interior" loading="eager">
+    </div>
+    <div class="page-hero-content">
+      <h1 class="page-hero-title">Our <em>Story</em></h1>
+      <p class="page-hero-subtitle">Over 130 years of warmth, flavor, and community.</p>
+    </div>
+  </section>
+
+  <!-- Story Intro -->
+  <section class="section">
+    <div class="section-container">
+      <div style="max-width:680px;margin:0 auto;" class="reveal">
+        <div class="section-label">
+          <span class="section-label-line"></span>
+          Since 1892
+        </div>
+        <h2 class="section-title" style="font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:1.5rem;">A Place Where <em>Time</em> Stands Still</h2>
+        <p style="font-size:1.05rem;color:var(--warm-brown);line-height:1.8;margin-bottom:1.25rem;">Vintage Cafe has been a cornerstone of the Everett community since 1892. What started as a small kitchen serving hearty meals to dockworkers and loggers has grown into one of the Pacific Northwest's most beloved gathering spots.</p>
+        <p style="font-size:1.05rem;color:var(--warm-brown);line-height:1.8;">Through world wars, depressions, booms, and transformations, our doors have never closed on the promise of a warm meal and a welcoming smile. Today, we honor that legacy with every plate we serve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section" style="background:var(--linen);">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="section-label-line"></span>
+          Through the Years
+        </div>
+        <h2 class="section-title">Our <em>Heritage</em></h2>
+      </div>
+      <div style="max-width:600px;" class="reveal" data-delay="0.2">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1892</div>
+            <p class="timeline-text">Our doors first open on Hewitt Avenue, serving breakfast and lunch to the workers building a young city called Everett.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1920s</div>
+            <p class="timeline-text">Prohibition couldn't slow us down. We became known for our coffee and pies — a refuge during uncertain times.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1950s</div>
+            <p class="timeline-text">The post-war boom brings new flavors to our menu. Classic American breakfasts become our signature, alongside global dishes from returning service members.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1980s</div>
+            <p class="timeline-text">A new generation takes the helm, refreshing the space while preserving the soul. Vintage French Toast becomes a legend.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Today</div>
+            <p class="timeline-text">With 1,723 reviews and a 4.4-star rating, we're still the place where Everett gathers — for breakfast, lunch, and everything in between.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="section-label-line"></span>
+          What We Stand For
+        </div>
+        <h2 class="section-title">Our <em>Values</em></h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-icon">
+            <i data-lucide="heart" style="width:24px;height:24px;"></i>
+          </div>
+          <h4>Community First</h4>
+          <p>We're not just a cafe — we're a gathering place. Every guest who walks through our doors becomes part of the Vintage family.</p>
+        </div>
+        <div class="value-card reveal" data-delay="0.1">
+          <div class="value-icon">
+            <i data-lucide="chef-hat" style="width:24px;height:24px;"></i>
+          </div>
+          <h4>Crafted With Care</h4>
+          <p>Every dish is made from scratch using quality ingredients. No shortcuts, no compromises — just honest food done right.</p>
+        </div>
+        <div class="value-card reveal" data-delay="0.2">
+          <div class="value-icon">
+            <i data-lucide="clock" style="width:24px;height:24px;"></i>
+          </div>
+          <h4>Timeless Hospitality</h4>
+          <p>The warmth that opened our doors in 1892 hasn't changed. Friendly service, quick smiles, and a table always waiting for you.</p>
+        </div>
+        <div class="value-card reveal" data-delay="0.3">
+          <div class="value-icon">
+            <i data-lucide="globe" style="width:24px;height:24px;"></i>
+          </div>
+          <h4>Global Inspiration</h4>
+          <p>From poutine to chicken marsala, our menu reflects the world beyond Everett while staying rooted in the comfort of home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section">
+    <div class="section-container" style="position:relative;z-index:1;">
+      <h2 class="cta-heading reveal">Come Be Part<br>of the <em>Story</em></h2>
+      <p class="cta-desc reveal" data-delay="0.1">The best chapters are written at the table. Join us for a meal and become part of something timeless.</p>
+      <div class="reveal" data-delay="0.2">
+        <a href="services.html" class="btn btn-primary">View Our Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Vintage<span>.</span></div>
+          <p class="footer-tagline">A casual gathering place since 1892. Serving global-inspired comfort food in the heart of Everett, Washington.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/vintagecafe" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <i data-lucide="instagram" style="width:18px;height:18px;"></i>
+            </a>
+            <a href="https://facebook.com/vintagecafe" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <i data-lucide="facebook" style="width:18px;height:18px;"></i>
+            </a>
+            <a href="https://yelp.com/biz/vintage-cafe-everett" target="_blank" rel="noopener" class="footer-social-link" aria-label="Yelp">
+              <i data-lucide="star" style="width:18px;height:18px;"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Navigate</div>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">Our Story</a>
+            <a href="services.html" class="footer-link">Menu</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Hours</div>
+          <div class="footer-links">
+            <span class="footer-link">Mon — Sun</span>
+            <span class="footer-link">7:00 AM — 3:00 PM</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-links">
+            <a href="tel:+14255551234" class="footer-link">(425) 555-1234</a>
+            <a href="mailto:hello@vintagecafe.com" class="footer-link">hello@vintagecafe.com</a>
+            <span class="footer-link">1510 Hewitt Ave, Everett WA</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">2025 Vintage Cafe. All rights reserved.</span>
+        <span class="footer-dw33py">Engineered in motion — <a href="https://dw33py.netlify.app" target="_blank" rel="noopener">Dw33pY</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay"></div>
+  <div class="cart-drawer" role="dialog" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button class="cart-close" aria-label="Close cart">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-amount">$0.00</span>
+      </div>
+      <button class="cart-checkout-btn">Place Order</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="checkout-modal-overlay">
+    <div class="checkout-modal">
+      <div class="checkout-modal-header">
+        <h3>Complete Order</h3>
+        <button class="checkout-modal-close cart-close" aria-label="Close checkout">
+          <i data-lucide="x" style="width:20px;height:20px;"></i>
+        </button>
+      </div>
+      
+      <!-- Order Summary -->
+      <div class="checkout-summary">
+        <div class="checkout-summary-title">Your Items</div>
+        <div class="checkout-summary-list"></div>
+        <div class="checkout-summary-divider"></div>
+        <div class="checkout-summary-item">
+          <span class="checkout-summary-item-name" style="font-weight:700;">Total</span>
+          <span class="checkout-summary-total" style="font-family:var(--font-heading);font-size:1.1rem;font-weight:700;color:var(--caramel);">$0.00</span>
+        </div>
+      </div>
+      
+      <form id="checkout-form" class="checkout-form">
+        <div class="form-group">
+          <label for="checkout-name">Name</label>
+          <input type="text" id="checkout-name" name="name" placeholder="Your full name" required>
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="checkout-phone">Phone</label>
+          <input type="tel" id="checkout-phone" name="phone" placeholder="(425) 555-0000" required>
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="checkout-time">Pickup Time</label>
+          <select id="checkout-time" name="time">
+            <option value="asap">As soon as possible</option>
+            <option value="30min">In 30 minutes</option>
+            <option value="1hr">In 1 hour</option>
+            <option value="90min">In 1.5 hours</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="checkout-notes">Special Instructions</label>
+          <textarea id="checkout-notes" name="notes" placeholder="Any allergies or preferences..." rows="3"></textarea>
+        </div>
+        <button type="submit" class="checkout-submit">Confirm Order</button>
+      </form>
+      <div class="order-confirmation">
+        <div class="order-confirmation-icon">
+          <i data-lucide="check" style="width:32px;height:32px;"></i>
+        </div>
+        <h3>Order Placed!</h3>
+        <p>We're preparing your order. We'll call you shortly to confirm.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Buttons -->
+  <div class="float-btns">
+    <a href="tel:+14255551234" id="float-call" class="float-btn float-call" aria-label="Call Vintage Cafe">
+      <i data-lucide="phone" style="width:22px;height:22px;"></i>
+    </a>
+    <a href="sms:+14255551234?body=Hi%20Vintage%20Cafe!%20I%27d%20like%20to%20place%20an%20order." id="float-text" class="float-btn float-text" aria-label="Text Vintage Cafe">
+      <i data-lucide="message-square" style="width:22px;height:22px;"></i>
+    </a>
+    <button class="float-btn float-top" aria-label="Back to top">
+      <i data-lucide="arrow-up" style="width:22px;height:22px;"></i>
+    </button>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
